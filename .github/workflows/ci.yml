@@ -23,7 +23,7 @@ jobs:
           coverage: none
 
       - name: Install dependencies
-        run: composer install --prefer-dist --no-interaction --no-progress --vvv
+        run: composer install --prefer-dist --no-interaction --no-progress -vvv
 
       - name: Run tests
         run: php -d error_reporting=E_ALL^E_DEPRECATED vendor/bin/phpunit --testdox || true
